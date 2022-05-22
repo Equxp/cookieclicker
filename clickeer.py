@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 import time
 
 def get_scores(scores):
+    "Get available score"
     try:
         num = int(scores.text.split()[0])
         return num
@@ -10,7 +11,7 @@ def get_scores(scores):
         return 0
 
 def main():
-    browser = webdriver.Chrome()
+    browser = webdriver.Chrome('F:\Programing Projects\Python Projects\cookieclicker\chromedriver.exe')
     browser.get("https://orteil.dashnet.org/cookieclicker/")
     cookie = browser.find_element(By.ID, "bigCookie")
       
