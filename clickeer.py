@@ -16,9 +16,10 @@ def click_prod0(browser, scores):
         price = int(browser.find_element(By.ID, 'productPrice0').text)
     except ValueError:
         price = 0
-        if price and price <= get_scores(scores):
-            prod0 = browser.find_element(By.ID, 'product0')
-            prod0.click()
+    if price and price <= get_scores(scores):
+        print(2)
+        prod0 = browser.find_element(By.ID, 'product0')
+        prod0.click()
 
 def main():
     browser = webdriver.Chrome('F:\Programing Projects\Python Projects\cookieclicker\chromedriver.exe')
